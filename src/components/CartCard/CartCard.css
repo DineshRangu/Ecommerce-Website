@@ -1,0 +1,132 @@
+.CartCard {
+    width: 90%;
+    max-width: 800px;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 30px;
+    border-radius: 16px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.CartCard:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+}
+
+.left-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    height: 100%;
+}
+
+.left-card img {
+    max-width: 120px;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.left-card .name-price {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 18px;
+    color: #333;
+}
+
+.left-card .name-price h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #222;
+}
+
+.left-card .name-price p {
+    margin: 0;
+    font-size: 1rem;
+    color: #555;
+}
+
+.right-card button {
+    background-color: darkolivegreen;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+.right-card button:hover {
+    background-color: black;
+    opacity: 0.9;
+}
+
+@media (max-width: 750px) {
+    .CartCard {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+        width: 95%;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .left-card {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        gap: 15px;
+    }
+
+    .left-card img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        max-height: 200px;
+    }
+
+    .right-card {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .right-card button {
+        width: 100%;
+        font-size: 16px;
+        padding: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .CartCard {
+        padding: 16px;
+        gap: 16px;
+    }
+
+    .left-card .name-price {
+        font-size: 16px;
+    }
+
+    .left-card .name-price h3 {
+        font-size: 1rem;
+    }
+
+    .left-card .name-price p {
+        font-size: 0.95rem;
+    }
+
+    .right-card button {
+        font-size: 15px;
+        padding: 10px;
+        border-radius: 10px;
+    }
+}
